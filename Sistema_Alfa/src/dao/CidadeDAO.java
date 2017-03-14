@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import model.Cidade;
 
+
 /**
  *
  * @author sidney.andrde@gmail.com
@@ -18,7 +19,7 @@ public class CidadeDAO {
     public void load(int id)throws Exception {
         String sql = "select * from endereco where idendereco = " + id;
         Cidade cidade = new Cidade();
-        ResultSet rs = executaQuery(sql);
+        ResultSet rs = executeQuery(sql);
         try {
             while (rs.next()) {
                 cidade.setIdCidade(rs.getInt("idcliente"));
